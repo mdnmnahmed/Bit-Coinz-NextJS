@@ -1,5 +1,6 @@
 import Layout from "./components/Layout"
-import Prices from "./components/Prices";
+import Prices from "./components/prices";
+import Fetch from 'isomorphic-unfetch'
 
 const index = (props) => {
     return (
@@ -13,11 +14,11 @@ const index = (props) => {
 }
 
 index.getInitialProps = async function() {
-    const res = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
+    const res = await Fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
     const data = await res.json();
 
     return {
-        data: data
+        data
     }
 }
 

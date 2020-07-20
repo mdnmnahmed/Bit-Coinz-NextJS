@@ -1,4 +1,4 @@
-export class Prices extends React.Component {
+class prices extends React.Component {
     state = {
         currency: 'USD'
     }
@@ -98,4 +98,4 @@ export class Prices extends React.Component {
     }
 }
 
-export default Prices;
+export default prices;
